@@ -14,7 +14,7 @@ Pixel Playhouse is an interactive console arcade that brings a collection of qui
 
 ##### Clone the repository to your local machine:
 
-  git clone https://github.com/abbey-deniro/PixelPlayhouse.git
+  git clone https://github.com/abbey-deniro/PixelPlayHouse.git
 
 ##### Run the arcade:
 
