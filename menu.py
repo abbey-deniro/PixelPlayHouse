@@ -6,9 +6,11 @@ from tic_tac_toe import game
 from rock_paper_scissors import rpsgame
 from quiz import fact_frenzy
 from mastermind import master_mind
+from wordle import wordle
 
 
 def print_ascii_welcome():
+    
     os.system('cls' if os.name == 'nt' else 'clear')
     print(r"""
  _  _  ____  __     ___  __   _  _  ____    ____  __     ____  __  _  _  ____  __      ____  __     __   _  _  _  _   __   _  _  ____  ____  _   
@@ -28,6 +30,7 @@ def print_menu():
     print("5: Rock Paper Scissors")
     print("6: Fact Frenzy")
     print("7: MasterMind")
+    print("8: PyWordle")
 
     choice = input("\nEnter number to start playing: ")
 
@@ -95,7 +98,15 @@ def print_menu():
  _|  _| \__,_| ____/ \__| \___| _|    _|  _| _| _|  _| \__,_| 
         """)
         master_mind()
-    # if(choice == "8"):
+    if(choice == "8"):
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print(r"""
+.----..-.  .-..-. . .-. .----. .----. .----. .-.   .----.
+| {}  }\ \/ / | |/ \| |/  {}  \| {}  }| {}  \| |   | {_  
+| .--'  }  {  |  .'.  |\      /| .-. \|     /| `--.| {__ 
+`-'     `--'  `-'   `-' `----' `-' `-'`----' `----'`----'
+        """)
+        wordle()
 
 
 print_ascii_welcome()
