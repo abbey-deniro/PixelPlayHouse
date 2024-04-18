@@ -42,9 +42,9 @@ def check_word(five_letter_words):
 def welcome():
     print("Welcome to PyWordle! Your goal is to guess a secret 5 letter word in 6 tries or less!\n" +
         "After each guess, you will receive feedback in the form of colored tiles, indicating how close your guess was to the word")
-    print("\nGreen: A letter is exactly right, both in value and position.")
-    print("Yellow: A letter is correct but in the wrong position.")
-    print("White: A letter is not in the word in any spot.")
+    print("\n\u001b[32mGreen\u001b[0m: A letter is exactly right, both in value and position.")
+    print("White: A letter is correct but in the wrong position.")
+    print("\u001b[31mRed\u001b[0m: A letter is not in the word in any spot.")
 
 def wordle():
     welcome()
