@@ -53,6 +53,7 @@ def main():
                 print('\nThat is not a valid letter.')
         
         if lives == 0:
+            play_again = False
             print(lives_visual_dict[lives])
             print("You died, sorry. The word was", word)
         else:

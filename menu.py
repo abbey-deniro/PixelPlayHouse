@@ -1,4 +1,4 @@
-import os
+import os, sys
 from hangman import main
 from madlibs import get_mad_lib
 from guess_the_number import choose_diff
@@ -19,6 +19,18 @@ def print_ascii_welcome():
 (_/\_)(____)\____/ \___)\__/ \_)(_/(____)   (__) \__/   (__)  (__)(_/\_)(____)\____/  (__)  \____/\_/\_/(__/  \_)(_/ \__/ \____/(____/(____)(_)                                                                                                      
 """)
     print("Choose from the menu below to get started!\n")
+
+def new_game():
+    print("Want to play another game?")
+    while True:
+        user_input = input(str("Enter y to go back to menu or enter q to quit.\n"))
+        if(user_input == 'y'):
+            print_ascii_welcome()
+            print_menu()
+        elif(user_input == 'q'):
+            sys.exit()
+        else:
+            print("Please enter y or q.")
 
 choice = ""
 
@@ -51,7 +63,8 @@ def print_menu():
 | '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
         """)
-        main();
+        main()
+        new_game()
     elif(choice == "2"):
         os.system('cls' if os.name == 'nt' else 'clear')
         print(r"""
@@ -62,6 +75,7 @@ def print_menu():
   \____|\__,_|\___||___/___/   |_| |_| |_|\___| |_| \_|\__,_|_| |_| |_|_.__/ \___|_|   
         """)
         choose_diff()
+        new_game()
     elif(choice == "3"):
         os.system('cls' if os.name == 'nt' else 'clear')
         print(r"""
@@ -71,12 +85,15 @@ def print_menu():
 |/__\|/__\|/__\|/__\|/__\|/__\|/__\|
         """)
         get_mad_lib()
+        new_game()
     elif(choice == "4"):
         os.system('cls' if os.name == 'nt' else 'clear')
         game()
+        new_game()
     elif(choice == "5"):
         os.system('cls' if os.name == 'nt' else 'clear')
         rpsgame()
+        new_game()
     elif(choice == "6"):
         os.system('cls' if os.name == 'nt' else 'clear')
         print(r"""
@@ -89,6 +106,7 @@ def print_menu():
     \_\/     \__\/\__\/ \_____\/  \__\/     \_\/     \_\/ \_\/ \_____\/ \__\/ \__\/\_______\/  \__\/ 
         """)
         fact_frenzy()
+        new_game()
     if(choice == "7"):
         os.system('cls' if os.name == 'nt' else 'clear')
         print(r"""
@@ -98,6 +116,7 @@ def print_menu():
  _|  _| \__,_| ____/ \__| \___| _|    _|  _| _| _|  _| \__,_| 
         """)
         master_mind()
+        new_game()
     if(choice == "8"):
         os.system('cls' if os.name == 'nt' else 'clear')
         print(r"""
@@ -107,6 +126,7 @@ def print_menu():
 `-'     `--'  `-'   `-' `----' `-' `-'`----' `----'`----'
         """)
         wordle()
+        new_game()
 
 
 print_ascii_welcome()

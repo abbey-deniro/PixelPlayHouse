@@ -7,7 +7,7 @@ Pixel Playhouse is an interactive console arcade that brings a collection of qui
 ### Features
 
     Multiple Games: A variety of games are included, each with unique challenges and gameplay styles.
-      Example: Hangman, Tic-Tac-Toe, Rock Paper Scissors and more!!
+      Example: Hangman, Tic-Tac-Toe, Rock Paper Scissors, PyWordle, and more!!!
     Easy to Play: Simple keyboard controls for intuitive and responsive gaming experiences.
     
 #### Getting Started
