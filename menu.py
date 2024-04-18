@@ -4,6 +4,8 @@ from madlibs import get_mad_lib
 from guess_the_number import choose_diff
 from tic_tac_toe import game
 from rock_paper_scissors import rpsgame
+from quiz import fact_frenzy
+from mastermind import master_mind
 
 
 def print_ascii_welcome():
@@ -24,6 +26,8 @@ def print_menu():
     print("3: MadLibs")
     print("4: Tic-Tac-Toe")
     print("5: Rock Paper Scissors")
+    print("6: Fact Frenzy")
+    print("7: MasterMind")
 
     choice = input("\nEnter number to start playing: ")
 
@@ -70,8 +74,27 @@ def print_menu():
     elif(choice == "5"):
         os.system('cls' if os.name == 'nt' else 'clear')
         rpsgame()
-    # if(choice == "6"):
-    # if(choice == "7"):
+    elif(choice == "6"):
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print(r"""
+ ______   ________   ______  _________   ______   ______    ______   ___   __      ______  __  __    
+/_____/\ /_______/\ /_____/\/________/\ /_____/\ /_____/\  /_____/\ /__/\ /__/\   /_____/\/_/\/_/\   
+\::::_\/_\::: _  \ \\:::__\/\__.::.__\/ \::::_\/_\:::_ \ \ \::::_\/_\::\_\\  \ \  \:::__\/\ \ \ \ \  
+ \:\/___/\\::(_)  \ \\:\ \  __ \::\ \    \:\/___/\\:(_) ) )_\:\/___/\\:. `-\  \ \    /: /  \:\_\ \ \ 
+  \:::._\/ \:: __  \ \\:\ \/_/\ \::\ \    \:::._\/ \: __ `\ \\::___\/_\:. _    \ \  /::/___ \::::_\/ 
+   \:\ \    \:.\ \  \ \\:\_\ \ \ \::\ \    \:\ \    \ \ `\ \ \\:\____/\\. \`-\  \ \/_:/____/\ \::\ \ 
+    \_\/     \__\/\__\/ \_____\/  \__\/     \_\/     \_\/ \_\/ \_____\/ \__\/ \__\/\_______\/  \__\/ 
+        """)
+        fact_frenzy()
+    if(choice == "7"):
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print(r"""
+   \  |               |                 \  | _)             | 
+  |\/ |   _` |   __|  __|   _ \   __|  |\/ |  |  __ \    _` | 
+  |   |  (   | \__ \  |     __/  |     |   |  |  |   |  (   | 
+ _|  _| \__,_| ____/ \__| \___| _|    _|  _| _| _|  _| \__,_| 
+        """)
+        master_mind()
     # if(choice == "8"):
 
 
